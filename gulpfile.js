@@ -144,10 +144,10 @@ gulp.task('ftp2', function() {
 gulp.task('ftp', function() {
  return gulp.src('dist/**/*.*')
    .pipe(ftp({
-     host: 'workincode.pe.hu',
+     host: 'myworkserv.pe.hu',
      remotePath: '/public_html',
      port: 21,
-     user: 'u305334178',
+     user: 'u498169281',
      pass: '29011979'
    }));
 });

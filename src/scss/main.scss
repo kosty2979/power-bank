@@ -1,6 +1,7 @@
 @import "bootstrap.min";
 @import "normalize";
 @import "variables";
+@import "animate.min";
 
 
 
@@ -21,11 +22,12 @@ html {
 }
 body {
 	margin-bottom: $footerMinHeight;
-	font-family: $robo;
+	font-family: $font;
+	color: $green;
 } 
 /* ---header nav----*/
 	.headNav{
-		background-color: $headColor;
+		//background-color: $headColor;
 		padding: 8px 0;
 		padding-top: 15px;
 		margin-bottom: 0;
@@ -35,7 +37,7 @@ body {
 		border: none;
 		border-radius: 0;
 		border-bottom: 2px solid $green;
-		border-top: 2px solid $green;
+		//border-top: 2px solid $green;
 		 &__logo{
 			padding: 0;
 			padding-left: 15px;
@@ -57,15 +59,14 @@ body {
 				&:focus {
 					color: $greenHover !important;
 					text-decoration: none;
-					background-color:  $headColor !important;
+					//background-color:  white !important;
 					}
 				&--2{
 					padding-left: 5px;
 					padding-right: 0px;
 					padding-top: 15px;
+					}
 				}
-				}
-
 			}
 		}
 		ul.myNavRight{
@@ -77,19 +78,19 @@ body {
 				padding-right: 10px;
 				color: $green;
 				font-size: 1.3em;
+				margin-bottom: 0;
 				}
 				>ul>li{
 					display:block;
 				}
 			}
-		}
-		
+		}	
 	}
 .name{
 	text-align: center;
-	font-style: italic;
-	color: $greenHover;
-	background-color: $green;
+	//font-style: italic;
+	color: $green;
+	//background-color: $green;
 	font-size: 1.8em;
 	letter-spacing: 3px;
 	font-weight: 600;
@@ -98,7 +99,6 @@ body {
 		margin-bottom:0;
 		padding-top: 25px;
 		padding-bottom: 25px;
-
 	}
 }
 .text{
@@ -107,28 +107,183 @@ body {
 	&__imgWrap{
 		border-radius: 10px;
 		overflow: hidden;
-		 box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-	  		
+		box-shadow: 0 2px 10px 0 rgba(0,104,43, 0.5);
+		&--2{
+		 	border: none;
+		 	box-shadow: none;
+		 }	  		
 	  }
   	&__img{
   		width:100%;
   		background-size: cover;
+		background-position: center center;	 
+	}
+	&__head{
+		color: $green;
+		letter-spacing: 0.8px;
+		font-weight: 400;
+		font-size: 1.5em;
+		//font-style: italic;
+	}
+}
+.change{	
+	&__head{
+		text-align: center;
+		font-size: 2.5em;
+		//font-style: italic;
+		letter-spacing: 2px;
+		padding-bottom:25px;
+	}
+	&__img{
+		display: inline-block;
+		width: 120px;
+		height: 80px;
+		background: url(../image/batt.png);
+		background-size: cover;
+		background-position: center center;
+		margin-top: 20px;
+		&--1{
+			background: url(../image/calendar.png);
+			height: 100px;
+			margin-top: 0;
+		}
+		&--2{
+			background: url(../image/change.png);
+		}
+	}
+	&__text{
+		font-size: 1.2em;
+		letter-spacing: 1px;
+	}
+}
+.padding__top{
+	padding-top: 45px;
+}
+.char{
+	&__head{
+		text-align: center;
+		font-size: 2.5em;
+		//font-style: italic;
+		letter-spacing: 2px;
+		padding-bottom:25px;
+	}
+	&__wrap{
+		border: 1px solid $green;
+		border-radius: 10px;
+		box-shadow: 0 2px 10px 0 rgba(0,104,43, 0.5);
+		padding: 25px;
+		padding-top: 10px;
+		margin-bottom: 15px;
+		&--2{
+			padding: 10px;
+			margin-top: 25px;
+		}
+	}
+	&__wrapHead{
+		text-align: center;
+		font-size: 1.3em;
+		//font-style: italic;
+		letter-spacing: 1px;
+	}
+	&__img{
+		display: inline-block;
+		width: 100px;
+		height: 63px;
+		background: url(../image/batt.png);
+		background-size: cover;
 		background-position: center center;
 	}
-}	
-.wrapper {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
+	&__textFirst{
+		font-size: 2em;
+		font-weight: 700;
+		//font-style: italic;
+		margin:0;
+		&--2{
+			color: $greenHover;
+		}
+	}
+	&__textSecond{
+		font-size: 1.2em;
+		font-weight: 700;
+		//font-style: italic;
+		color: $greenHover;
+		margin:0;
+	}
+	&__textLast{
+		font-size: 1.3em;
+		font-weight: 700;
+		//font-style: italic;
+		margin:0;
+		&--2{
+			color: $greenHover;
+		}
+	}
+	&__list{
+		padding:25px;
+	}
+	&__item{
+		list-style:  	disc outside none;
+		line-height: 2em;
+	}
+	&__item2{
+		margin-left: 25px;
+	}
 }
+
+.triangle-left {
+	width: 100%;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 150px solid $greenHover;
+	border-bottom: 5px solid transparent;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.triangle-right {
+	width: 100%;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 150px solid $greenHover;
+	border-bottom: 5px solid transparent;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.greenLine{
+	height:1px;
+	background-color: $green;
+}	
+
 .header {
-  background-image: url("../image/header.png");
+  background-image: url("../image/header.jpg");
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
   font-weight: bold;
   text-align: center;
-  min-height: 800px;
+  min-height: 520px;
+}
+.contact{
+	padding-bottom: 40px;
+	&__text{
+		font-size: 1.6em;
+		display: inline-block;;
+		margin-right: 30px;
+		vertical-align: super;
+		line-height: 1.6em;
+	}
+	&__link{
+		font-size: 1.6em;
+		display: inline-block;;
+		margin-right: 30px;
+		vertical-align: super;
+		line-height: 1.6em;
+		color:$green;
+		&:hover,
+		&:active{
+			color: $greenHover;
+			text-decoration: none;
+		}
+	}
 }
 
 /* ----footer-line--- */
@@ -136,71 +291,18 @@ body {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		color: #cccccc;
+		color: $green;
 		line-height: $footerMinHeight;
-		background-color: $footerMinColor;
+		background-color: $headColor;
+		border-top: 2px solid $green;
+		font-size: 1.2em;
+
 		&__text{
 			margin:0;
+			//color: $green;
+			font-weight: 600;
+
 		}
 	} 
 
-	.form{
-		margin: 10% 0;
-		&__body{
-			margin-bottom: 20px;
-		}
-		&__grey{
-			 border-radius: 10px;
-  			background-color: rgb(249, 249, 249);
-  			padding: 40px 15%;
-  			margin-bottom: 20px;
-		}
-		&__head{
-			padding-bottom: 20px;
-			 color: rgb(28, 28, 28);
-		}
-		&__input{
-			margin-bottom: 15px;
-		}
-		&__text{
-			padding-top: 10px;
-			margin: 0;
-			color: rgb(59, 85, 102);
- 			line-height: 1.625;
-			&--first{
-				padding-bottom: 40px;
-			}
-			&--black{
-				color: rgb(85, 85, 85);
-				padding-left: 15px;
-				padding-right: 15px;
-			}
-			&--grey{
-				color: #bbbbbb;
-				font-size: 0.9em;
-			}
-		}
-		&__link{
-			font-weight: 600;
-			color: $green;
-			text-decoration: none;
-			&:hover {
-				color: $greenHover !important;
-				text-decoration: none;
-			}
-			&:visited {
-				color: $green;	
-			}
-		}
-	}
-	.btn-green{
-		background-color: $green;
-		font-weight: bold;
-		color: rgb(59, 85, 102);
-		padding-left: 0;
-		padding-right: 0;
-		&:hover{
-			background-color: $greenHover;
-			color: rgb(59, 85, 102);
-		}
-	}
+	
