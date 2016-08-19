@@ -51,6 +51,10 @@ gulp.task('html', function() {
     gulp.src('./src/*.html')
   .pipe(gulp.dest("./dist"));         
 });
+gulp.task('gif', function() {
+    gulp.src('./src/*.gif')
+  .pipe(gulp.dest("./dist"));         
+});
 
 
 gulp.task('reload', function() {
@@ -109,6 +113,7 @@ gulp.src('src/image/*.*')
 gulp.task('watch', function(){
     gulp.watch('src/scss/*.*',['css'])
     gulp.watch('src/*.html',['html'])
+    gulp.watch('src/*.gif',['gif'])
     gulp.watch('dist/*.html',['reload'])
     gulp.watch('src/js/*.js',['js'])
      gulp.watch('src/image/*.*',['img'])
@@ -128,7 +133,7 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('src/scss/'));
 });
 
-gulp.task('clean', del.bind(null, ['tmp', 'dist/*.html', 'dist/css','dist/js','dist/image']));
+gulp.task('clean', del.bind(null, ['tmp', 'dist/*.html', 'dist/*.gif', 'dist/css','dist/js','dist/image']));
 
 gulp.task('ftp2', function() {
  return gulp.src('dist/**/*.*')
@@ -152,7 +157,7 @@ gulp.task('ftp', function() {
    }));
 });
 
-gulp.task('build', gulpsync.sync(['html', 'css',"img","js"]))
+gulp.task('build', gulpsync.sync(['html', 'gif', 'css',"img","js"]))
 gulp.task('serve', gulpsync.sync(['clean','build','webserver', "watch"]))
 gulp.task('default', gulpsync.sync(['clean', 'build']))
 gulp.task('deploy_zzz', ['ftp2']);

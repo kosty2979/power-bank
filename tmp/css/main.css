@@ -8176,7 +8176,8 @@ html {
 body {
   margin-bottom: 60px;
   font-family: "Ubuntu", "Arial", sans-serif;
-  color: #00682B; }
+  color: #00682B;
+  margin-top: 80px; }
 
 /* ---header nav----*/
 .headNav {
@@ -8216,10 +8217,12 @@ body {
       float: right; }
       .headNav ul.myNavRight > li > p.headNav__link {
         padding-left: 0px;
-        padding-right: 10px;
+        padding-right: 0px;
         color: #00682B;
         font-size: 1.3em;
         margin-bottom: 0; }
+        .headNav ul.myNavRight > li > p.headNav__link > a {
+          margin-right: 0; }
       .headNav ul.myNavRight > li > ul > li {
         display: block; }
 
@@ -8400,9 +8403,47 @@ body {
   width: 100%;
   color: #00682B;
   line-height: 60px;
-  background-color: #d5e8c8;
+  background-color: #F8F8F8;
   border-top: 2px solid #00682B;
-  font-size: 1.2em; }
+  font-size: 1em; }
   .footerMin__text {
     margin: 0;
     font-weight: 600; }
+
+@media (max-width: 720px) {
+  .headNav__logo {
+    padding: 0;
+    padding-left: 0px;
+    padding-top: 15px; }
+  .headNav__logoImg {
+    max-height: 60%; }
+  .headNav ul > li {
+    display: inline-block; }
+    .headNav ul > li > a.headNav__link {
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 1em; }
+  .headNav ul.myNavRight {
+    float: right; }
+    .headNav ul.myNavRight > li {
+      float: right; }
+      .headNav ul.myNavRight > li > p.headNav__link {
+        padding-left: 0px;
+        font-size: 1em;
+        margin-bottom: 0; }
+        .headNav ul.myNavRight > li > p.headNav__link > a {
+          margin-right: 0; }
+      .headNav ul.myNavRight > li > ul > li {
+        display: block; }
+  .name__head,
+  .change__head {
+    font-size: 1.2em; }
+  .char__head,
+  .change__head {
+    font-size: 1.6em; }
+  .text__head {
+    font-size: 1em; }
+  .contact__link, .contact__text {
+    font-size: 1.2em;
+    display: block;
+    margin-right: 0; } }
