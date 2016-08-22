@@ -157,8 +157,22 @@ gulp.task('ftp', function() {
    }));
 });
 
+gulp.task('ftp3', function() {
+ return gulp.src('dist/**/*.*')
+   .pipe(ftp({
+     host: 'power-menu.com.ua',
+     remotePath: '/public_html',
+     port: 21,
+     user: 'u386247423',
+     pass: '29011979'
+   }));
+});
+
+
+
 gulp.task('build', gulpsync.sync(['html', 'gif', 'css',"img","js"]))
 gulp.task('serve', gulpsync.sync(['clean','build','webserver', "watch"]))
 gulp.task('default', gulpsync.sync(['clean', 'build']))
 gulp.task('deploy_zzz', ['ftp2']);
 gulp.task('deploy_incode', ['ftp']);
+gulp.task('deploy_site', ['ftp3']);

@@ -8410,6 +8410,14 @@ body {
     margin: 0;
     font-weight: 600; }
 
+.atten {
+  font-size: 1.8em;
+  color: #00B31B;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #00682B; }
+
 @media (max-width: 720px) {
   .headNav__logo {
     padding: 0;
