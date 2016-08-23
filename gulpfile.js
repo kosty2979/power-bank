@@ -142,7 +142,7 @@ gulp.task('ftp2', function() {
      remotePath: '',
      port: 21,
      user: 'admin@kos.zzz.com.ua',
-     pass: '29011979'
+     pass: '290119791'
    }));
 });
 
@@ -153,20 +153,11 @@ gulp.task('ftp', function() {
      remotePath: '/public_html',
      port: 21,
      user: 'u498169281',
-     pass: '29011979'
+     pass: '290119791'
    }));
 });
 
-gulp.task('ftp3', function() {
- return gulp.src('dist/**/*.*')
-   .pipe(ftp({
-     host: 'power-menu.com.ua',
-     remotePath: '/public_html',
-     port: 21,
-     user: 'u386247423',
-     pass: '29011979'
-   }));
-});
+
 
 
 
@@ -175,4 +166,4 @@ gulp.task('serve', gulpsync.sync(['clean','build','webserver', "watch"]))
 gulp.task('default', gulpsync.sync(['clean', 'build']))
 gulp.task('deploy_zzz', ['ftp2']);
 gulp.task('deploy_incode', ['ftp']);
-gulp.task('deploy_site', ['ftp3']);
+
